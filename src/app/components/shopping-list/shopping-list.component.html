@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Product Name</th>
+    <th scope="col">Price</th>
+    <th scope="col">Amount</th>
+    <th scope="col">Row Total</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let cartItem of CartList">
+    <td>{{cartItem.productItem.productName}}</td>
+    <td>{{cartItem.productItem.productPrice}} ₺</td>
+    <td>{{cartItem.amount}}</td>
+    <td>{{cartItem.rowTotalPrice}} ₺</td>
+  </tr>
+  </tbody>
+</table>

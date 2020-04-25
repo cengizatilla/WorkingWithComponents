@@ -1,0 +1,21 @@
+<div class="form">
+  <div class="form-row">
+    <div class="form-group col-md-5">
+      <label >Product</label>
+      <select class="form-control" #productSelect>
+        <option>Choose</option>
+        <option *ngFor="let productItem of productList"
+                [value]="productItem.productId">{{productItem.productName}}</option>
+      </select>
+    </div>
+    <div class="form-group col-md-5">
+      <label>Amount</label>
+      <input type="text" class="form-control" #amountInput>
+    </div>
+    <div class="form-group col-md-2">
+      <label>Actions</label>
+      <button class="btn btn-success" (click)="addNewCartItem()">Add Cart</button>
+    </div>
+  </div>
+
+</div>
